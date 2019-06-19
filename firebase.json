@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "../GT7",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

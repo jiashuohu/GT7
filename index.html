@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> 
+    img {
+        max-width: 100vw;
+        height: auto;
+    }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>七龍珠GT</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=big5">
+        
+</head>
+
+<body>
+<div id="app">
+    <section id="signInAndSignUp" v-if="!currentUser">
+        <div class="sign-wrapper">
+          
+            <div class="signInAndSignUp-wrapper clearfix">
+                <div class="sign-radio">
+                    <label :class="{checked:actionType === 'signUp'}"><input type="radio" name="type" value="signUp" v-model="actionType">SIGN-UP</label>
+                    <label :class="{checked:actionType === 'login'}"><input type="radio" name="type" value="login" v-model="actionType">LOG-IN</label>
+
+                </div>
+
+                <div class="signUp clearfix" v-if="actionType == 'signUp'">
+                    <form  @submit.prevent=signUp>
+                        <div class="formRow">
+                            <p> Email
+                            </p>
+                          <input type="text" v-model="formData.username" placeholder="請輸入帳號">
+                        </div>
+                        <div class="formRow">
+                           <p>Password</p>
+                            <input type="password"  v-model="formData.password" placeholder="請輸入密碼" >
+                        </div>
+                        <div class="formActions">
+                            <input type="submit" value="SIGN-UP">
+                        </div>
+                    </form>
+                </div>
+                <div class="login" v-if="actionType == 'login'">
+
+                    <form @submit.prevent=login>
+                        <div class="formRow">
+                            <p>Email</p><input type="text" v-model="formData.username"  placeholder="請輸入帳號">
+                        </div>
+                        <div class="formRow">
+                            <p>Password</p><input type="password" v-model="formData.password"  placeholder="請輸入密碼">
+                        </div>
+                        <div class="formActions">
+                            <input type="submit" value="LOG-IN">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="todo" v-if="currentUser">
+
+        <div id="List-wrapper">
+            <div class="todoList-wrapper clearfix">
+                <div id="header"><a href="index.html"><img class="logo" src="image/網頁排版2-02.png"></a></div>
+                <!-- <div id="newTask">
+                    <input type="text" v-model="newTodo" @keypress.enter="addTodo" placeholder=" 添加Todo">
+
+                </div> -->
+                <button type="button" class="menu-button">
+                    三
+                  </button> 
+                <input type="checkbox" class="menu-button-checkbox"> 
+                <div class="menu">
+                    <ul>
+                       <li><a href="guitar.html">樂器介紹</a></li>
+                      
+                       <li><a href="chord.html">和弦介紹</a></li>
+                      
+                       <li><a href="song.html">範例歌曲</a></li>
+                       
+                       <li><a href="score.html">範例琴譜</a></li>
+
+                       <li><a href="text.html">留言發問</a></li>
+                       
+                       <div id="button" > <label><button @click="logout"></button>LOG-OUT</label></div>
+                    </ul>
+                    
+            
+                </div>           
+                
+            </div>
+            <div class="bs">
+                <img style="float:left" src="image/網頁排版2-06.png" width="150vw" alt="block" style="vertical-align: top;">學習吉他為自己的生活添加旋律與節奏
+                    <br>大碩
+                    <br>創辦人之一
+                </div>
+                <div class="st"><img src="image/網頁排版2-05.png" width="10"> </div>
+            <div ><img class="ad" src="image/網頁排版2-03.png"></div>
+            <div><img class="ha" src="image/網頁排版2-04.png">
+                <div class="w">
+                    <h2>Benjamin Chen</h2>
+                    <p><br><br>吉他歷：10年<br>
+                        資歷：<br>
+                            國北數位系排御用木吉他手<br>
+                            數位系樂團幽靈木吉他老師<br>
+                            簡介：<br>
+                            擅長木吉他彈奏、吉他彈奏<br>
+                            曾受邀至數位耶晚、數位迎新...<br>
+                            等各大場合進行演出。</p>
+            </div>
+
+            </div>
+            
+            
+           
+            
+            </div>
+            
+            <!-- <div class="todo-wrapper">
+                <ol class="Todos">
+                    <div id="text"><label >待办事项</label></div>
+                    <div id="li-text">
+
+                        <li v-for="todo in todoList">
+                            <div id="li-text-wrapper" class="clearfix">
+                                <input  type="checkbox" v-model="todo.done" @click="finished(todo)">
+                                <span v-if="todo.done" class="active">已完成</span>
+                                <span v-else>未完成</span>
+                                <span style=" font-size: 18px;padding-left: 0px;color:black;
+                                width: 100%;overflow: hidden;word-break: break-all;">{{ todo.title }}</span>
+
+
+                                <button @click="remove(todo)" id="delete">delete</button>
+                                <label id="create-time" >创建时间：</label><label id="time">{{ todo.createdAt}}</label>
+
+                            </div>
+
+                        </li>
+
+
+                    </div>
+
+                </ol>
+            </div> -->
+
+
+        </div>
+    </section>
+</div>
+
+
+<script src="bundle.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,612 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+    body{
+    background-color: #fff;
+    }
+    
+    ol{
+        list-style: none;
+    }
+    
+    .clearfix::after{
+        display:block;
+        content: '';
+        clear: both;
+    }
+    .todo-wrapper{
+        width:100vw;
+        height:100vh;
+        background-color: #aaaaaa;
+    
+    }
+    
+    #signInAndSignUp{
+  
+      background-color: #3c3c3c;
+      height:100vh;
+      position: relative;
+      overflow: hidden;
+      background-image:url(../image/2_960x540.jpg);
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-size :cover;
+  }
+    .sign-wrapper{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .sign-wrapper>h1{
+        text-align: center;
+        font-size: 2rem;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    .logo{
+      height: 70px;
+      width: 80px;
+      position: relative;
+      top:5px;
+      right:280px;
+     
+    }
+    
+    .st{
+        float: right;
+        margin: 2px 10px 0 0;
+        height: 10vw;
+        width: 1vw;
+        text-align : right;
+      }
+     
+     
+      .bs{
+        font-size:1em;
+        float: right;
+        margin: 10px;
+        text-align : left;
+        height: 12vw;
+        width: 28vw;
+      }
+    
+    
+    .w2{
+        font-size: 17px;
+        color:#000;
+        display:flex;
+        position: relative;
+        left:900px;
+        top:-970px;
+    }
+    
+    .content{
+        position: relative;
+        right:-5em;
+        width: 80vw;
+        height: 10vw;
+    }
+    
+   
+    .bts{
+        background-color: #aaaaaa;
+        width: 52vw;
+        height:70px;
+        font-size: 200%;
+        color: #000;
+        transition:background 0.7s;
+        border-radius: 10px;
+    }
+    
+    .shows{
+        width:50%;
+        justify-content: center;
+    }
+    .mes{   
+        display: inline-flex;
+        background-color: #EEEEEE;
+        border-radius: 8px;
+        padding: 10px;
+        margin: 1%;
+        width: 52vw;
+        height:100px;
+        font-family: Microsoft JhengHei;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .middle{
+        margin:70px;
+      }
+    
+    .time{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .chat{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    h4{ font-family: Microsoft JhengHei;}
+    
+    .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+      }
+      
+      .animated:hover {
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+      }
+      
+      
+    .sign-wrapper > .signInAndSignUp-wrapper {
+        box-shadow: 0 0 8px #333;
+        border-radius: 5px;
+        background: #fff;
+    }
+    #signInAndSignUp .sign-wrapper .sign-radio{
+        text-align: center;
+        width:300px;
+        height:50px;
+    }
+    #signInAndSignUp .sign-wrapper .sign-radio label{
+        letter-spacing: 0px;
+        padding-left: 0px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0 30px;
+        color: #3B4465;
+        padding-bottom: 12px;
+        cursor: pointer;
+        opacity: 0.6;
+    }
+    
+    #signInAndSignUp .sign-wrapper .sign-radio label.checked{
+        opacity: 1;
+    }
+    
+    #signInAndSignUp .sign-wrapper .sign-radio label input{
+        display: none;
+    }
+    
+    .signInAndSignUp-wrapper  .formRow p
+    {
+        width: 80%;
+        text-align: left;
+        height: 30px;
+        line-height: 30px;
+        color: #BECACA;
+        margin: 0 auto;
+    }
+    .signInAndSignUp-wrapper  .formRow input {
+        width: 80%;
+        height: 40px;
+        display: block;
+        margin: 0 auto;
+        background-color: #f5f2f0;
+        border: 1px solid #D7E3F2;
+        border-radius: 5px;
+        padding: 0 10px;
+    }
+    .signInAndSignUp-wrapper .formActions{
+        float: right;
+        margin-bottom: 20px;
+        margin-right: 10%;
+        margin-top:10px;
+    }
+    .signInAndSignUp-wrapper .formActions input {
+       background-color: #2B81AF;
+        border-radius: 28px;
+        font-family: 微软雅黑;
+        color: #ffffff;
+        font-size: 16px;
+        padding: 6px 15px 6px 15px;
+        text-decoration: none;
+        border: none;
+    }
+    
+    .signInAndSignUp-wrapper .formActions input:hover {
+        background-color: #0D3349;
+        color: #ffffff;
+        text-decoration: none;
+        border: none;
+    }
+    
+    .todoList-wrapper {
+        min-height:80px;
+        width:100%;
+        background: rgba(47,47,47,0.98);
+        position: relative;
+    }
+    
+    #header{
+    
+        position: absolute;
+        left:300px;
+        line-height: 50px;
+        font-size: 32px;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        float: left;
+        color: #EEEEEE;
+    }
+    
+    
+    #newTask{
+    
+        position: absolute;
+        right:350px;
+        float: right;
+        margin-top:12px;
+    
+    }
+    #button{
+        position: relative;
+        float: right;
+        cursor: pointer;
+        width: 130px;
+        top: -0.6vw;
+     
+        
+    }
+  
+    
+    #newTask > input {
+        height: 24px;
+        min-width:300px;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.24), 0 1px 6px rgba(0, 0, 0, 0.45) inset;
+        border-radius: 5px;
+        border: none;
+    }
+    #button label{
+        display: block;
+      width: 150px;
+        font-size: 16px;
+        padding: 10px;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        color: #EEEEEE;
+        border:1px #fff solid;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+    transition: background 0.7s;
+    }
+    #button label button{
+        display: none;
+    }
+  
+    .menu ul{
+      font-family: Arial,"微軟正黑體",BoldMT ,san-serif;
+      position: absolute;
+      right: 13%;
+      margin-top: 28px;
+  }
+  .menu ul li{
+    display: inline-block;
+      color: #fff;
+      margin-right: 50px;
+  }
+  .menu ul li a{
+      text-decoration: none;
+      list-style-type: none;
+      color: #fff;
+      padding: 30px;
+      width: 50px;
+      transition: color 10s ,background 0.7s;
+  }
+  .menu ul li a:hover{
+    background:#fff;
+    color: #000;
+   
+  }
+  
+    .Todos {
+    
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    
+    }
+    
+    
+    .Todos >#text {
+        position: absolute;
+        top:10px;
+        left:300px;
+    }
+    .Todos >#text  label{
+        color: #2F6FAD;
+        font-size: 24px;
+        font-family: "Apple Color Emoji";
+    }
+    
+    .Todos >#li-text {
+        position: absolute;
+        left:0;
+        top:50px;
+        width:100%;
+    }
+    
+    .Todos >#li-text  li{
+        border:1px solid #8e908c;
+        display: block;
+        width:100%;
+        padding: 10px;
+        background-color: #f5f2f0;
+    }
+    .Todos >#li-text li:not(:last-child){
+        border-bottom: none;
+    }
+    .Todos #li-text #li-text-wrapper{
+        position: relative;
+        padding:10px;
+    
+    }
+    .Todos #li-text #li-text-wrapper input{
+        margin-right:32px;
+    }
+    
+    
+    .Todos #li-text #li-text-wrapper #delete{
+    
+        float: right;
+        background-color: #2B81AF;
+        border-radius: 28px;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        color: #ffffff;
+        font-size: 16px;
+        padding: 3px 7px 3px 7px;
+        text-decoration: none;
+        border: none;
+    
+    }
+    
+    .Todos #li-text #li-text-wrapper :nth-child(2),.Todos #li-text #li-text-wrapper :nth-child(3){
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 10px;
+        color: #aaaaaa;
+        padding-right: 5px;
+    
+    }
+    
+    .Todos #li-text #li-text-wrapper label{
+        color: #8e908c;
+        font-size: 8px;
+    
+    }
+    
+    .Todos #li-text #li-text-wrapper label#create-time{
+        position: absolute;
+        bottom: 0;
+        right:150px;
+    
+    }
+    .Todos #li-text #li-text-wrapper label#time{
+        position: absolute;
+        bottom: 0;
+        right:80px;
+    
+    }
+    
+    .Todos #li-text #li-text-wrapper span.active{
+        display: inline-block;
+        color: red;
+    }
+   
+    /* #button:hover {
+      
+      margin-top:13px;
+      border:
+      
+        } 
+         */
+        #button:hover label {
+          color:#fff;
+         background-color: #fff;
+        background: rgba(255, 255, 255, 0.24)
+          
+            }
+            .bts:hover{
+                color:#fff;
+         background-color: #3c3c3c;
+         
+            }
+            /*@media screen and (orientation:portrait){
+                .st{
+                  display:none;
+                }
+                .bs{
+                  display:none;
+                }
+                .video-container {
+                  position: relative;
+                  width:100vw;
+                  height:60vw;
+                  }
+              }*/
+            @media screen and (min-width: 1187px) {
+                .menu-button,
+                .menu-button-checkbox {
+                  display: none;  /*讓漢堡在電腦版隱藏*/
+                }
+              }
+              @media screen and (max-width: 1186px){
+                  .st{
+                    display:none;
+                  }
+                  .bs{
+                    display:none;
+                  }
+                  .todoList-wrapper {
+                    width: auto;
+                  }
+                .menu-button {    /* 調整漢堡的位置*/
+                    font-family: Arial,"微軟正黑體",BoldMT ,san-serif;
+                    float: right;
+                    font-size: 50px;
+                    line-height: -20px;
+                    color: white;
+                    background: transparent;
+                    padding: 0 15px;
+                    border: 0;
+                  }
+                .menu-button-checkbox {  /*和漢堡一樣的長寬位置*/
+                    position: fixed;
+                    top: -10vw;
+                    right: 0;
+                    width: 20vw;
+                    height: 42vw;
+                    opacity: 0;  /*隱藏checkbox*/
+                  }
+                
+                  .menu-button-checkbox:checked ~ .menu {
+                    display: block;
+                  }
+                  .menu {       /* 選單的樣式和位置*/
+                    display: none; /* 預設隱藏選單*/
+                    position: fixed;
+                    background: rgba(47,47,47,0.98);
+                    right: 1vw;
+                    top: 40px;
+                    width: 30vw;
+                    height: 50vw;
+                    z-index:1;
+                  }
+                  #button{
+                    position: relative;
+                    float: right;
+                    cursor: pointer;
+                    width: 50vw;
+                    top: 0vw;
+                    left:33vw;
+                   }
+                   .menu ul {
+                    list-style-type:none;	/* 去除項目清單的小黑點 */
+                    margin:0;	/* 清除項目清單的外間距 */
+                    padding:0;
+                  }
+                .menu ul li{
+                  float: none;
+                }
+    
+                .menu ul li a{ 
+                    position:relative;
+                    display:block;	/* 將超連結設定為區塊模式 */
+                    width:43vw;	/* 設定超連結區塊的寬度 */
+                    height:-30vw;
+                    right: -18vw;
+                    top: -2vw;
+                    float:right;
+                    z-index:2;
+                    text-decoration:none;
+                    text-align:center;	
+                    color: #fff;
+                    transition: color 10s ;
+                    background :0.7s;
+                }
+                   .menu ul li a:hover{
+                    background:#fff;
+                    color: #000;
+                   
+                  }
+                }
+                @media screen and (max-width: 767px){
+                    .ha{
+                        margin: 2px;
+                        top: 2vw;
+                        left: 3vw;
+                        height: 130vw;
+                        width: 93vw; 
+                     }
+                      .st{
+                        display:none;
+                      }
+                      .bs{
+                        display:none;
+                      }
+                      .bts{
+                        background-color: #aaaaaa;
+                        width: 52vw;
+                        height:70px;
+                        font-size: 200%;
+                        color: #000;
+                        transition:background 0.7s;
+                        border-radius: 10px;
+                    }
+                      .todoList-wrapper {
+                        width: auto;
+                      }
+                    .menu-button {    /* 調整漢堡的位置*/
+                        font-family: Arial,"微軟正黑體",BoldMT ,san-serif;
+                        float: right;
+                        font-size: 50px;
+                        line-height: -20px;
+                        color: white;
+                        background: transparent;
+                        padding: 0 15px;
+                        border: 0;
+                      }
+                    .menu-button-checkbox {  /*和漢堡一樣的長寬位置*/
+                        position: fixed;
+                        top: -10vw;
+                        right: 0;
+                        width: 20vw;
+                        height: 42vw;
+                        opacity: 0;  /*隱藏checkbox*/
+                      }
+                    
+                      .menu-button-checkbox:checked ~ .menu {
+                        display: block;
+                      }
+                    .menu {       /* 選單的樣式和位置*/
+                        display: none; /* 預設隱藏選單*/
+                        position: fixed;
+                        background: rgba(47,47,47,0.98);
+                        right: 1vw;
+                        top: 40px;
+                        width: 45vw;
+                        height: 130vw;
+                        z-index:1;
+                      }
+                      #button{
+                        position: relative;
+                        float: right;
+                        cursor: pointer;
+                        width: 50vw;
+                        top: 0vw;
+                        left:14vw;
+                       }
+                       .menu ul {
+                        list-style-type:none;	/* 去除項目清單的小黑點 */
+                      margin:0;	/* 清除項目清單的外間距 */
+                      padding:0;
+                      }
+                    .menu ul li{
+                      float: none;
+                    }
+          
+                    .menu ul li a{ 
+                        position:relative;
+                        display:block;	/* 將超連結設定為區塊模式 */
+                        width:43vw;	/* 設定超連結區塊的寬度 */
+                        height:-30vw;
+                        right: -18vw;
+                        top: -2vw;
+                        float:right;
+                        z-index:2;
+                        text-decoration:none;
+                        text-align:center;	
+                        color: #fff;
+                        transition: color 10s ;
+                        background :0.7s;
+                    }
+                       .menu ul li a:hover{
+                        background:#fff;
+                        color: #000;
+                       
+                      }
+                    }
